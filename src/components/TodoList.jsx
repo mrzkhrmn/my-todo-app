@@ -19,10 +19,13 @@ export const TodoList = () => {
   });
   return (
     <ul>
-      <li className="my-2 text-sm italic">All Your Notes Here...</li>
-      {filteredTodos.map((todo, index) => (
-        <TodoItem key={index} todo={todo} index={index} />
-      ))}
+      {filteredTodos.length < 1 ? (
+        <li className="my-2 text-sm italic">All Your Notes Here...</li>
+      ) : (
+        filteredTodos.map((todo, index) => (
+          <TodoItem key={index} todo={todo} index={index} />
+        ))
+      )}
     </ul>
   );
 };

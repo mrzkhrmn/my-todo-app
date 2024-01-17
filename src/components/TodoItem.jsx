@@ -10,7 +10,7 @@ import {
 export const TodoItem = ({ todo, index }) => {
   const dispatch = useDispatch();
   return (
-    <li className="flex flex-col sm:flex-row sm:items-center justify-between border-b py-2 gap-4">
+    <li className="flex flex-col sm:flex-row sm:items-center justify-between border-b py-2 gap-4 mt-4">
       <div className="flex items-center">
         <span className="mr-4 text-white">{index + 1}.</span>
         <span
